@@ -1,0 +1,392 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,top=1in,bottom=1in,left=1.5in,right=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{cite}
+\usepackage{enumitem} %linespacing of itemize thing
+\usepackage{amsmath,amssymb,esint}
+\renewcommand*\contentsname{TABLE OF CONTENTS}
+\begin{document}
+\begin{titlepage}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1in,height=1in]{KhwopaLogo.PNG}
+\end{figure}
+
+%Main Contents
+\begin{center}
+TRIBHUVAN UNIVERSITY\\
+\begin{Large}
+\textbf{KHWOPA COLLEGE OF ENGINEERING\\}
+\end{Large}
+\begin{large}
+DEPARTMENT OF ELECTRICAL ENGINEERING\\
+\end{large}
+\bigskip
+Libali-2, Bhaktapur, Nepal\\
+\vspace{2.54cm}
+A\\
+\smallskip
+MID TERM PROGRESS REPORT\\
+\smallskip
+ON\\
+\smallskip
+\begin{Large}
+\textbf{`` IMPACT OF TIME OF USE OF ELECTRICITY PRICING IN POWER SYSTEM LOSS AND NODE VOLTAGE "}\\
+\end{Large}
+\smallskip
+(as a partial fullfillment of Bachelor's Degree in Computer Engineering)\\
+\smallskip
+(Course Code: EE755)\\
+\vspace{1in}		
+\begin{large}
+\textbf{Project Members}\\
+\end{large}
+\bigskip
+\begin{tabular}{ll}
+\bigskip
+Mani Niraula & 073BEL20\\
+\bigskip
+Prabesh Raj Ojha & 073BEL26\\
+\bigskip
+Sunil Simkhada & 073BEL45\\
+\bigskip
+Yogesh Layalu & 073BEL48\\
+\end{tabular}\\
+\vspace{1in}
+Febraury, 2020
+\end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+%Acknowledgement section
+\begin{center}
+\textbf{ACKNOWLEDGEMENT}
+%\section*{ACKNOWLEDGEMENT}
+\end{center}
+\bigskip
+We would like to appreciate \textbf{Er. Rakesh Gwachha}, HoD, Department of Electrical
+Engineering, for providing us an opportunity to do the project and giving us all support and guidance despite of his busy schedule. We are highly obliged to \textbf{ Er. Ashish Shrestha}  who took keen interest on our proposal and guided us all along by providing all the necessary information for moving on our project ahead. We would like to express our deepest gratitude to the entire lecturer for their suggestions and encouragement. We would like to express our gratitude to Khwopa College of Engineering for the opportunity of undertaking the Fourth Year Project.
+\pagebreak
+\begin{abstract}
+\bigskip
+This project proposes an analytical method that incorporates the time of use
+(TOU) strategy into the reliability evaluation, power system loss and node voltage.
+Traditional utility prices involve a set rate per kilowatt-hour, which can fluctuate during the summer and winter. A sliding rate scale, however, is structured
+according to peak and off-peak times of day. It enables the reduction of peak valley difference of a load curve, economizes the electricity cost, and eases energy
+consumption for the customers. We will use RBTS as test system in our project.
+\textit{\textbf{Keywords:}Time of Use electricity, Power system reliabiblity, Power system loss,
+RBTS}
+\end{abstract}
+\pagebreak
+\tableofcontents
+\pagebreak
+\listoffigures
+\pagebreak
+\pagenumbering{arabic}
+\section{Intoduction}
+Traditional utility prices involve a set rate per kilowatt-hour, which can fluctuate
+during the summer and winter. A sliding rate scale, however, is structured according to peak and off-peak times of day. This is called a “time-of-use” (TOU) rate
+plan. Under such a plan, your bill will be determined by how much energy you use
+and when you use it. The prices and peak times vary based on the season and day
+of the week; for example, many utility companies consider weekends off-peak.
+The structure often looks different in the summer or winter months, with more
+tiers to accommodate the increase in HVAC system use as everyone tries to cool
+off or stay warm.
+\pagebreak
+\section{Problem Statement}
+Every power generation plant can generate a fixed quantity of power. However,
+energy demand cannot be fixed. It varies from time to time which destabilizes the
+utility. Demand response (DR) program is designed to cope with the load balancing problem. To minimize the extensive usage of electricity during on-peak hours
+(i.e., energy demand increases). The DR program encourages the user to shift
+the load from on-peak hours and get incentives. TOU tariff is the most common
+pricing scheme among others. The TOU tariff is divided into three blocks: peak,
+flat and valley hours. Although, TOU tariff can reduce the peak-load of electricity demand. However, almost zero energy consumption is observed during some
+peak period. Zero energy consumption means no revenue. To achieve the better
+performance, an energy management controller is required to schedule the load in
+mean level. The electricity price for load shifting consumer is the same as other
+consumers and reducing the peak mean improving the reliability of the system and
+reducing the loss of system.
+
+An equal step length iteration method is used to compute peak, flat and valley
+period and use analytical method to compute voltage fluctuation and losses of
+system.
+\pagebreak
+\section{Objective of  Project}
+The main objective of this project is to evaluate power system loss percentage
+and voltage fluctuation before and after considering TOU and compare with our
+conventional method of tariff system. We have divided objective in two parts.\\
+\\
+Major  Objective
+\begin{itemize}
+\item To analyze impact of TOU on power system loss and node voltage
+\end{itemize}
+Specific Objective
+\begin{itemize}
+\item To draw load curve
+\item To obtain optimal period partition
+\item To calculate power loss and node voltage before and after considering TOU
+\end{itemize}
+\section{Scope of Project}
+It is one of the best tools for demand side management and its scope is in the
+reduction of system loss by implementing TOU also play important role.
+\pagebreak
+\section{Literature Review}
+TOU electricity pricing is a relatively new field which has attracted attention from
+researchers. When firms use dynamic pricing in order to match demand with the
+inventory or capacity, the creation of price differences between segments may
+cause consumers to switch (from higher priced segments to lower priced segments).\\\\
+
+The demand response (DR) program has a significant influence on improving
+the reliability of electrical distribution systems and alleviating the electricity shortage during the peak Period\cite{yang2012game}
+\cite{sheen1994time}
+\cite{zhou2017multiobjective}
+\cite{zeng2018hybrid} . TOU Programme has been widely used
+in the electrical Power system. After carrying out a TOU electricity price program,
+the electrical energy consumption behavior of customers will be changed through
+increasing load demand during the valley period and reducing load demand during
+the peak period [5] [6] . Thus by the use of TOU programme it helps in economic
+use of the system and maintain the utilization rate of the electrical equipment. The
+existing literatures related to TOU strategies primarily focused on two aspects,
+i.e., the period partitioning and the TOU electricity pricing optimization. Time
+varying prices by motivating customers to reduce their consumption in peak periods propel the electricity industry towards a higher efficiency compared to that of
+common flat prices [7]. Traditional k-means algorithm [8] and bisecting k-means
+algorithm [9] are used for period Partitioning, load forecasting and probabilistic
+power flow analysis.\\\\
+
+Our specific objective is to make an analysis on the impact of TOU strategy on
+the voltage quality and the power loss of the electrical distribution system. Here in
+our project the work are divided into the three parts, firstly a period partitioning algorithm based on the moving variable boundary technique is used for overcoming
+the instability of traditional clustering algorithms and improving the efficiency of
+the period partitioning. Secondly, an optimal TOU pricing model is proposed by
+minimizing the peak-valley difference with the help of RMSD (root mean square
+distance). Thirdly the reliability indices are defined for considering the impact of
+TOU strategy and improving the power quality and the power loss. Finally, the
+system is tested on IEEE-6 bus system for the validation of the proposed method.\\
+\pagebreak
+
+The price elasticity matrix of the demand is composed of elasticity coefficients
+which describe the ratio of electrical energy variation and to the price variation.
+The electricity consumption is not only related to the current period but also to the
+other periods. Elasticity coefficients of demand are divided into self-Elasticity and
+Cross-Elasticity coefficient [10] . A self-elasticity coefficient relates the load and
+price at the same time while cross elasticity coefficients relate the load and price at
+different times [7]. To capture the elastic behavior of load in response to the time
+varying prices, a price elasticity matrix with self-elasticity and cross-elasticity coefficients equal to -0.2 and 0.0087 is utilized, respectively [11] .\\
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig1.PNG}
+\textbf{\caption{\textit{ Typical Demand Curve}}}
+%\label{Fig1}
+\end{figure}
+
+The demand for most commodities decreases as the price of the commodity
+increases as illustrated by the demand curve sketched on Fig 1.\\
+
+The diagonal elements of this matrix represent the self-elasticity and the offdiagonal elements correspond to the cross elasticity. Column of this matrix indicates how a change in price during the single period affects the demand during all
+the periods. If the only nonzero elements in this column are above the diagonal,
+the consumers react to a high price by bringing forward their consumption. If they
+are below the diagonal, they postpone their consumption until after the high price
+period. If consumers have the ability to reschedule their production over a long
+period, the nonzero elements will be spread widely over the column. On the other
+hand, if their flexibility is limited, the nonzero elements will be clustered around the diagonal. Some customers may also decide that, if they have to reschedule
+their electricity consumption, they might as well take advantage of the hours of
+lowest prices, which typically are in the early hours of the morning [12].
+\pagebreak
+\section{Methodology}
+Here, we will use RBTS as test system and if required data are unavailable data
+will be assumed from related research papers and following are the steps to calculate the node voltage and percentage power loss by considering time of use of
+electricity.
+\bigskip
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig2.PNG}
+\textbf{\caption{\textit{Block diagram of proposed project}}}
+\end{figure}
+\pagebreak
+\subsection{Optimal Period Partition}
+Hourly load curve of a day can be divided into peak flat and valley period [13]
+.Equal step length iteration algorithm is used to optimize the period partitioning
+[14] is used in our project. Optimized period partition is divided into two parts.\\
+\subsubsection{Peak flat valley period partition}
+Let $\left\lbrace\textit{Pt,t }=1,2...24\right\rbrace$  be the hourly load sequence for a day. t = 1 denotes the
+hour period from midnight to 1 am. The subsequent hour periods are defined ac-
+cordingly. $P_{min}$ denotes the minimum of the sequence and $P_{max}$ the maximum.
+Assume that $m_{1},m_{2}, and,  m_{3}$,  which belong to the interval $[P_{min},P_{max}]$ repre-
+sent three moving variables related to the peak, the flat, and the valley periods,
+respectively.\\
+
+let $m_{j}$ (j = 1,  2 , 3) be the decision variables and the root mean square distance
+(RMSD) between $P_{t}$ and $m_{j}$ as the objective function [15]. An optimal period
+partition model of a typical day can be established by the following optimization
+problem:\\
+\begin{equation}
+MinRMSD=\sqrt{\frac{1}{24}\sum_{t=1}^{24}(P_{t}-\sum_{j=1}^{3}(\theta_{j}m_{j\mid P_{t} \epsilon G_{j}}))^{2}}
+\end{equation}
+where, \\
+\begin{equation}
+\left\lbrace
+\begin{array}{c}
+m_{1}-m_{2}>0 \\ \\
+m_{2}-m_{3}>0\\ \\
+P_{min}\leq m_{j} \leq P_{max}\\
+\end{array}
+\right\rbrace
+\end{equation}
+\\\\
+Where, $j = 1,2, and 3$ represent the peak, flat, and valley periods, respectively, and $G_{j}$  is the load set of the  $j^{th}$ period; if  $4p_{t}$ is the element  of  $G_{j},\theta_{j} = 1$, otherwise $\theta_{j} = 0 .$\\
+\bigskip
+\subsubsection{Optimization of peak flat valley period partition}
+This section presents an optimization method for the PFV partition model based
+on an equal step length iteration technique.Let the moving variables $m_{1}, m_{2}$ and $m_{3}$ gradually move from  $P_{min} to P_{max} $ with an equal step length, and keep $m_{3}<m_{2}<m_{1}$. The interval [$P_{min},P_{max}$] is divided into N equal parts.\\
+
+\pagebreak
+Steps:\\
+\begin{enumerate}
+\item Setting equal step length\\\\
+$$\Delta_{m} = \frac{P_{max}-P_{min}}{N}$$
+\item Initializing the moving variable as:\\\\
+$m_{3}=P_{min},m_{2}=P_{min}+\Delta_{m},m_{1}=P_{min}+2\Delta_{m}.Let, K_{3}=0,K_{2}=1,K_{1}=2$
+\item Calculating moving variables as:\\\\
+$$m_{3}=P_{min}+K_{3}\Delta_{m}\,\,\,\,or\,\,\,\,m_{2}=P_{min}+K_{2}\Delta_{m}\,\,\,\,or\,\,\,\,m_{1}=P_{min}+K_{1}\Delta_{m}$$
+\item Form the period sets for peak:\\\\
+Form the sets for the peak ,the valley and the flat period.Calculate the distance between each hourly load (t=1,2,3..24) and moving variable $m_{1}, m_{2}$ and $m_{3}$ respectively. Classify the $t^{th}$ hour into peak period sets $G_{1}$,  the
+flat period sets $G_{2}$ and the valley period sets $G_{3}$ according to the shortest
+distance principle.\\\\
+%$$\left\lbrace t_{\epsilon} \left\lbrace G_{1}\right\rbrace , if  \mid P_{t}-m{1} \mid = min\,\,\,\, \left\lbrace   \mid P_{t}-m_{j} \mid j %= 1,2,3\right\rbrace \right\rbrace$$
+\begin{eqnarray*}
+\left\lbrace t_{\epsilon} \left\lbrace G_{1}\right\rbrace , if  \mid P_{t}-m{1} \mid = min\,\,\,\, \left\lbrace   \mid P_{t}-m_{j} \mid j = 1,2,3\right\rbrace \right\rbrace\\\\
+\left\lbrace t_{\epsilon} \left\lbrace G_{2}\right\rbrace , if  \mid P_{t}-m{2} \mid = min\,\,\,\, \left\lbrace   \mid P_{t}-m_{j} \mid j = 1,2,3\right\rbrace \right\rbrace\\\\
+\left\lbrace t_{\epsilon} \left\lbrace G_{3}\right\rbrace , if  \mid P_{t}-m{3} \mid = min\,\,\,\, \left\lbrace   \mid P_{t}-m_{j} \mid j = 1,2,3\right\rbrace \right\rbrace
+\end{eqnarray*}
+\item Calculation of the RMSD iteratively\\
+\item  Termination criterion of iteration if\\\\
+$m_{3} = P_{min} + (N-2)\Delta m,  m_{2} = P_{min} + (N-1)\Delta m,  and m_{1} = P_{max}$\\\\
+$$Let, k_{1} = k_{1}+ 1 \,\,\,\, or \,\,\,\, k_{2} = k_{2}+ 1\,\,\,\, or \,\,\,\, k_{3} = k_{3}+ 1$$
+\smallskip
+\item Output the optimal period partitioning results The partition that has minimum RMSD is the optimal PFV period partition. Let $ G_{1}, G_{2}, G_{3} $ be peak parti-
+tioned peak, flat and  valley respectively. \\
+\end{enumerate}
+\pagebreak
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig3.PNG}
+\textbf{\caption{\textit{Flowchart of Peak Flat Valley period partition}}}
+\end{figure}
+\pagebreak
+\section{Results}
+The RTS and RBTS systems are used for the required data. The proposed method
+was implemented in MATLAB software.\\
+\subsection{Draw Load Curve}
+\bigskip
+Hourly sequential data to draw load curve is taken from RTS system which is
+shown in Table 1 below.\\\\
+\begin{table}[!hbt]
+\centering
+\caption{Sequential Data}
+\smallskip
+\begin{tabular}{|c|c|c|}
+\hline 
+S.N. & Hour & Load in per \\ 
+ & & unit \\ 
+\hline 
+1 & 12-1 am & 0.67 \\ 
+\hline 
+2 & 1-2 am & 0.63 \\ 
+\hline 
+3 & 2-3 am & 0.6 \\ 
+\hline 
+4 & 3-4 am & 0.59 \\ 
+\hline 
+5 & 4-5 am & 0.59 \\ 
+\hline 
+6 & 5-6 am & 0.6 \\ 
+\hline 
+7 & 6-7 am & 0.74 \\ 
+\hline 
+8 & 7-8 am & 0.86 \\ 
+\hline 
+9 & 8-9 am & 0.95 \\ 
+\hline 
+10 & 9-10 am & 0.96 \\ 
+\hline 
+11 & 10-11 am & 0.96 \\ 
+\hline 
+12 & 11-Noon & 0.95 \\ 
+\hline 
+\end{tabular}
+\hspace{1cm}
+\begin{tabular}{|c|c|c|}
+ \hline 
+S.N. & Hour & Load in per \\ 
+ & & unit \\  
+ \hline 
+ 13 & Noon-1 pm & 0.95 \\ 
+ \hline 
+ 14 & 1-2 pm & 0.95 \\ 
+ \hline 
+ 15 & 2-3 pm & 0.93 \\ 
+ \hline 
+ 16 & 3-4 pm & 0.94 \\ 
+ \hline 
+ 17 & 4-5 pm & 0.99 \\ 
+ \hline 
+ 18 & 5-6 pm & 1 \\ 
+ \hline 
+ 19 & 6-7 pm & 1 \\ 
+ \hline 
+ 20 & 7-8 pm & 0.96 \\ 
+ \hline 
+ 21 & 8-9 pm & 0.91 \\ 
+ \hline 
+ 22 & 9-10 pm & 0.83 \\ 
+ \hline 
+ 23 & 10-11 pm & 0.73 \\ 
+ \hline 
+ 24 & 11-12 pm & 0.63 \\ 
+ \hline 
+ \end{tabular}  
+\end{table}\\
+\bigskip
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig4.PNG}
+\textbf{\caption{\textit{Load Curve}}}
+\end{figure}
+\pagebreak
+\subsection{Period Partition}
+The normalized sequential load data are provided from the RTS system to construct
+the period partition. After drawing load curve, we used equal step length iteration
+for peak, flat, valley period partition. The partitioned load curve is shown below:
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig5.PNG}
+\textbf{\caption{\textit{ Partitioned load curve in peak, flat and valley period}}}
+\end{figure}
+\pagebreak
+\section{Conclusion}
+We took the data from the RBTS and plotted the load curve before implementing
+Time of Use Of electricity (TOU) and after drawing load curve, we used equal step
+length iteration for peak, flat, valley period partition.\\
+\cite{yang2012game}
+\cite{sheen1994time}
+\cite{zhou2017multiobjective}
+\cite{zeng2018hybrid}
+\cite{li2014development}
+\cite{celebi2012time}
+\cite{safdarian2014medium}
+\cite{ren2017probabilistic}
+\cite{liu2008kernel}
+\cite{yang2019optimal}
+\cite{kirschen2003demand}
+\cite{kirschen2000factoring}
+\cite{cao2011optimized}
+\cite{yang2018reliability}
+\cite{witten2002data}
+\pagebreak
+\bibliographystyle{ieeetran}
+\bibliography{References}
+
+\end{document}

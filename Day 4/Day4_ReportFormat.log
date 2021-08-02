@@ -1,0 +1,258 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.4.30)  3 MAY 2020 09:37
+entering extended mode
+**./Day4_ReportFormat.tex
+(Day4_ReportFormat.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-04-06> (D:\Backup\Latex\tex/latex/base\report.cls
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
+(D:\Backup\Latex\tex/latex/base\size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(D:\Backup\Latex\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(D:\Backup\Latex\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(D:\Backup\Latex\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(D:\Backup\Latex\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count176
+\Gm@cntv=\count177
+\c@Gm@tempcnt=\count178
+\Gm@bindingoffset=\dimen135
+\Gm@wd@mp=\dimen136
+\Gm@odd@mp=\dimen137
+\Gm@even@mp=\dimen138
+\Gm@layoutwidth=\dimen139
+\Gm@layoutheight=\dimen140
+\Gm@layouthoffset=\dimen141
+\Gm@layoutvoffset=\dimen142
+\Gm@dimlist=\toks16
+
+(D:\Backup\Latex\tex/latex/geometry\geometry.cfg))
+(D:\Backup\Latex\tex/latex/graphics\graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:\Backup\Latex\tex/latex/graphics\graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(D:\Backup\Latex\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(D:\Backup\Latex\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(D:\Backup\Latex\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
+)
+(D:\Backup\Latex\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count179
+\float@exts=\toks17
+\float@box=\box45
+\@float@everytoks=\toks18
+\@floatcapt=\box46
+)
+(D:\Backup\Latex\tex/latex/setspace\setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(D:\Backup\Latex\tex/latex/lipsum\lipsum.sty
+(D:\Backup\Latex\tex/latex/l3kernel\expl3.sty
+Package: expl3 2020-04-06 L3 programming layer (loader) 
+
+(D:\Backup\Latex\tex/latex/l3backend\l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count180
+\l__pdf_internal_box=\box47
+))
+(D:\Backup\Latex\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count181
+\g__xparse_grabber_int=\count182
+\l__xparse_m_args_int=\count183
+\l__xparse_v_nesting_int=\count184
+)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+(D:\Backup\Latex\tex/latex/lipsum\lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+))
+(D:\Backup\Latex\tex/latex/cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+) (Day4_ReportFormat.aux)
+\openout1 = `Day4_ReportFormat.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(D:\Backup\Latex\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count185
+\scratchdimen=\dimen145
+\scratchbox=\box48
+\nofMPsegments=\count186
+\nofMParguments=\count187
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count188
+\MPscratchDim=\dimen146
+\MPnumerator=\count189
+\makeMPintoPDFobject=\count190
+\everyMPtoPDFconversion=\toks20
+) (D:\Backup\Latex\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+<khwopa.png, id=1, 401.5pt x 401.5pt>
+File: khwopa.png Graphic file (type png)
+<use khwopa.png>
+Package pdftex.def Info: khwopa.png  used on input line 13.
+(pdftex.def)             Requested size: 72.26688pt x 72.26688pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 41.
+ [1
+
+{C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./khwopa.png
+ (PNG copy)>]
+[1] [2] (Day4_ReportFormat.lof)
+\tf@lof=\write3
+\openout3 = `Day4_ReportFormat.lof'.
+
+ [3
+
+] (Day4_ReportFormat.lot)
+\tf@lot=\write4
+\openout4 = `Day4_ReportFormat.lot'.
+
+ [4
+
+]
+(Day4_ReportFormat.toc)
+\tf@toc=\write5
+\openout5 = `Day4_ReportFormat.toc'.
+
+ [5
+
+]
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--86
+\OT1/cmr/m/n/12 luc-tus mau-ris.
+ []
+
+[1
+
+]
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--93
+\OT1/cmr/m/n/12 luc-tus mau-ris.
+ []
+
+[2
+
+]
+Chapter 3.
+(Day4_ReportFormat.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 97--2
+\OT1/cmr/m/n/12 luc-tus mau-ris.
+ []
+
+[3
+
+]) [4
+
+] (Day4_ReportFormat.aux) ) 
+Here is how much of TeX's memory you used:
+ 2475 strings out of 480930
+ 43113 string characters out of 2915174
+ 547539 words of memory out of 3000000
+ 18333 multiletter control sequences out of 15000+200000
+ 538510 words of font info for 44 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,6n,38p,700b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Backup/Latex/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb><D:/Backup/Latex/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><D:/Backup/
+Latex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Backup/Latex/fonts/type1/pub
+lic/amsfonts/cm/cmti12.pfb>
+Output written on Day4_ReportFormat.pdf (10 pages, 322047 bytes).
+PDF statistics:
+ 52 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

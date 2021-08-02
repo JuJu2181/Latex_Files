@@ -1,0 +1,145 @@
+\documentclass[12pt,a4paper]{report}
+%font size 12pt a4 paper report
+\usepackage{amsmath,esint,amssymb}
+%package for math symbols
+
+
+\begin{document}
+\chapter{Typesetting mathematics}
+\section{Common math notation}
+
+superscript: \\
+$$x^2$$   %display mode for math
+$$x^n$$
+$$x^{23}$$
+
+subscript: \\
+$$x_2$$
+$$x_{20}$$
+
+Greek Letters: \\
+$$\pi$$
+$$\phi$$
+$$\alpha$$
+$$\beta$$
+$$\theta$$
+$$\epsilon$$
+$$y=\pm5$$
+$$\infty$$
+\pagebreak
+\section{Simple Equation}
+$$ax+by+c=0$$
+
+\begin{equation}
+ax+by+c=0
+\end{equation}
+Multiple Equation : \\
+$$ax+by+c=1$$
+$$x+y=1$$
+$$x+y+z=1$$
+
+\begin{eqnarray*}%*removes label
+ax+by+c=1\\
+x+y=1\\
+x+y=z+1
+\end{eqnarray*}
+%standard method for multiple eqn below
+\begin{eqnarray}
+ax+by+c&=&1\\
+x+y&=&1\\
+x+y&=&z+1
+\end{eqnarray}
+\pagebreak
+\section{Fraction}
+$$a\div b$$ %not fraction
+Fraction:
+$$\frac{a}{b}$$
+$$\frac{a}{b}=\frac{c}{d}$$
+$$\frac{a^2}{b^2}=\frac{c^2}{d^2}$$
+$$\frac{d^2y}{dx^2}$$
+\pagebreak
+\section{Square Root,Cube Root and nth Root}
+$$\sqrt{4}$$%power of root in big bracket and number in curly
+$$\sqrt[3]{8}$$
+
+Evaluate:
+$$\sqrt{2+\sqrt{2+\sqrt{2+...}}}$$
+\begin{equation}
+i_{D}=I_{S}(e^{\frac{v_{D}}{\eta.v_T}}-1)
+\end{equation}
+$$i_{D}=I_{S}(e^{\frac{v_{D}}{\eta.v_T}}-1)$$
+$$\ln$$
+
+\chapter{Calculus}
+\section{Differential Equation}
+\begin{eqnarray}
+\frac{dy}{dx}\\
+\frac{d^{2}y}{dx^{2}}\\
+\frac{d^{2}y}{dx^{2}}+3\frac{dy}{dx}&=&1 \\
+\frac{d^{2}y}{dx^{2}}+3\frac{dy}{dx}&=&e^{ax}\sin{bx}
+%\frac{d^{3}y}{dx^{3}}&=&e^{ax}+\sinbx
+\end{eqnarray}
+\section{Integration}
+\subsection{Line Integral}
+\begin{eqnarray*}
+\int\\
+\int f(x) dx \\
+\int f(x) \,dx \\
+\int_{x_{1}}^{x_{2}}f(x)\,dx\\
+\end{eqnarray*}
+\subsection{Surface Integral}
+\begin{eqnarray*}
+\iint\\
+\iint(x,y) \, dx \,dy\\
+\oint\\
+\iiint\\
+\end{eqnarray*}
+
+\section{Fourier integral}
+\begin{eqnarray}
+f(t)=\frac{1}{2\pi}\,\int_{-\infty}^{+\infty}F(S)e^{jwt}\,dt
+\end{eqnarray}
+
+\section{Maxwell's Equation}
+Gauss Law:\\
+$$\overset{\rightarrow}{\nabla}.\overset{\rightarrow}{E}=\frac{\rho}{\epsilon_{0}}$$
+
+\section{Vector}
+$$\overset{\rightarrow}{a}.\overset{\rightarrow}{b}=0$$
+$$\overset{\rightarrow}{a}\times\overset{\rightarrow}{b}=0$$
+
+\section{Typesetting Matrices}
+$$
+A=
+\left(
+\begin{array}{ccc}
+a & b & c\\
+d & e & f\\
+g & h & i
+\end{array}
+\right)
+$$\\
+$$
+A=
+\left[
+\begin{array}{ccc}
+a & b & c\\
+d & e & f\\
+g & h & i
+\end{array}
+\right]
+$$\\
+$$
+A=
+\left\lbrace
+\begin{array}{ccc}
+a & b & c\\
+d & e & f\\
+g & h & i
+\end{array}
+\right\rbrace
+$$
+
+$$\sum_{x=0}^{\infty}$$
+$\therefore$
+\end{document}

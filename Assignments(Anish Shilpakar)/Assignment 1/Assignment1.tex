@@ -1,0 +1,233 @@
+%comments in this code are either test codes or guidance for future use
+%Coded By : Anish Shilpakar (CRN:KCE075BCT008)
+\documentclass[12 pt,a4paper]{report}
+\usepackage{amsmath,amssymb,esint}
+
+\begin{document}
+\chapter{Typesetting Mathematics in \LaTeX}
+\begin{equation}
+ax+by+c=1
+\end{equation}\\
+\begin{equation}
+X+y
+\end{equation}
+\section{Simple Equations}
+$$Y_{D}=Z_{C}$$
+$$x+y=1$$
+$$ax+by+c=z+1$$
+\pagebreak
+\begin{eqnarray*}
+\\\\
+Y_{D}&=&Z_{C}\\
+x+y&=&1\\
+ax+by+c&=&z+1\\
+x^{10^{15}}&=&y^{12}
+\theta\\
+\beta\\
+\Omega\\
+\rho\\
+\alpha\\
+\delta\\
+\Delta\\
+\chi\\
+\phi\\
+\Pi\\
+\pi\\
+\gamma\\
+\Gamma\\
+\lambda\\
+l*b\\
+a.b\\
+Ohm'slaw:\\
+I=\frac{V}{R}
+\end{eqnarray*}\\
+Ohm's law:\\
+$$I=\frac{V}{R}$$
+\section{Square Root, Cube Root, fourth root and nth Root}
+$$\sqrt{[n]x}$$
+$$\sqrt[3]{8}$$
+$$\frac{1}{2}$$
+$$\sqrt{2},\sqrt[3]{81},\sqrt[4]{16},\sqrt[n]{x}$$
+Evaluate:
+$$\sqrt{2+\sqrt{2+\sqrt{2+}...}}$$
+\section{Simple Equations}
+$$ax+by+cz=0$$
+$$\frac{a}{b}=\frac{c}{d}$$
+$$\frac{a^{x}}{y}=b^{y}.c^{x}$$
+\section{Diode Equations:}
+\begin{eqnarray}
+i_D=I_S(e^{\frac{v_D}{\eta.V_T}}-1)\\
+V_{D2}-V_{D1}=2.303\eta V_{T}ln(\frac{I_{D2}}{I_{D1}})\\
+i_D=I_S\left(^{\frac{V_D}{\eta.V_T}}-1\right)\\
+V_{D_{2}}-V_{D_{1}}=2.303\eta V_{T}\ln(\frac{I_{D2}}{I_{D1}})\\
+\end{eqnarray}
+\chapter{Calculas}
+\section{Differential Equations:}
+\begin{eqnarray}
+\frac{dy}{dx}+1=0&\\
+\frac{d^{2}y}{dx^{2}}+\frac{dy}{dx}+6=0&\\
+\frac{d^{2}y}{dx^{2}}+5\frac{dy}{dx}+6=1&\\
+\frac{d^{2}y}{dx^{2}}+5\frac{dy}{dx}+6=2e^{ax}\sin{bx}&\\
+\frac{d^{3}y}{dx^{3}}+8\frac{d^{2}y}{dx^{2}}+5\frac{dy}{dx}+6=2e^{ax}\cos{bx}&\\
+\frac{d^{2}y}{dx^{2}}=-\frac{y^{3}}{x^{3}}\\
+\sin^{2}x+\cos^{2}x=1
+\end{eqnarray}
+\pagebreak
+\section{Integration:}
+\subsection{Line Integrals:}
+\begin{eqnarray}
+\int\\
+\int f(x)dx\\
+\int_{a}^{b} f(x)dx\\
+\int_{a}^{b} f(x)dx\\
+\int_{x_{1}}^{x_{2}} f(x)dx 
+\end{eqnarray}
+\subsection{Surface Integrals: }
+\begin{eqnarray}
+\iint_{S} f(x,y)dx\,dy\\
+\oiint_{S} f(x,y)dx\,dy\\
+\int_{x_{1}}^{x_{2}}\int_{y_{1}}^{y_{2}}f(x,y)dx\,dy
+\end{eqnarray}
+\subsection{Volume Integral: }
+\begin{equation}
+\iiint_{V}f(x,y,z)dx\,dy\,dz
+\end{equation}
+\begin{equation}
+\int_{x_{1}}^{x_{2}}\int_{y_{1}}^{y_{2}}\int_{z_{1}}^{z_{2}} f(x,y,z)dx\,dy\,dz
+\end{equation}
+\section{Fourier Integral:}
+\begin{equation}
+f(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}F(S)e^{jwt}dt
+\end{equation}
+\section{Fourier Transform:}
+\begin{equation}
+F(S)=\int_{-\infty}^{+\infty}f(t)e^{-jwt}dt
+\end{equation}
+\section{Inverse Laplace Transform:}
+\begin{equation}
+f(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}F(S)e^{st}dt
+\end{equation}
+\section{Laplace Transform:}
+\begin{equation}
+F(S)=\int_{-\infty}^{+\infty}f(t)e^{-st}dt
+\end{equation}
+\section{Maxwell's Equations:}
+\subsection{Differential form of Maxwell's Equation:}
+Differential form of Maxwell's equations are categorized as follows:\\
+Gauss law:
+\begin{eqnarray*}
+\overset{\rightarrow}{\nabla}.\overset{\rightarrow}{E}=\frac{\rho}{\epsilon_{0}}\\
+\overset{\rightarrow}{\nabla}.\overset{\rightarrow}{E}=\frac{\rho}{\epsilon_{0}}\\
+\overset{\rightarrow}{\nabla}.\overset{\rightarrow}{E}=\frac{\rho}{\epsilon_{0}}\\
+%\overset{\rightarrow}{a}.\overset{\rightarrow}{b}=0\\
+%\overset{\rightarrow}{a}\times\overset{\rightarrow}{b}=0
+\end{eqnarray*}
+$$\overset{\rightarrow}{a}.\overset{\rightarrow}{b}=0$$
+$$\overset{\rightarrow}{a}\times\overset{\rightarrow}{b}=0$$
+$$\overline{a}$$
+\begin{center}
+\underline{Electrical Engineering}
+\end{center}
+%\,\,\,\,\,\,\,\,Gauss law for magnetism:
+
+Gauss law for magnetism:
+$$\overset{\rightarrow}{\nabla}.\overset{\rightarrow}{B}=0$$
+Faraday's law of induction:
+$$\overset{\rightarrow}{\nabla}\times\overset{\rightarrow}{E}=-\frac{B}{\delta t}$$
+Ampere's Circuital Law:
+$$\overset{\rightarrow}{\nabla}\times\overset{\rightarrow}{E}=-\mu_{o}(J+\epsilon_{o}\frac{dE}{dt})$$
+\subsection{Integral form of Maxwell's Equation}
+Integral Form of Maxwell's equation are categorized as follows:\\
+Gauss Law:\\
+$$\int\overset{\rightarrow}{E}.\overset{\rightarrow}{dl}=0$$ 
+Gauss Law for Magnetism:\\
+$$\int_{S}\overset{\rightarrow}{B}.\overset{\rightarrow}{ds}=0$$
+\section{Typesetting Matrices and Determinants:}
+$$
+A=
+\left(
+\begin{array}{ccc}
+a & b & c\\
+d & e & f\\
+g & h & i
+\end{array}
+\right)
+$$\\
+$$
+B=
+\left[
+\begin{array}{ccc}
+1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9
+\end{array}
+\right]
+$$\\
+$$
+C=
+\left\lbrace
+\begin{array}{ccc}
+\alpha & \beta & \gamma\\
+\varsigma & \epsilon & \kappa\\
+\Delta & \lambda & \hbar
+\end{array}
+\right\rbrace
+$$
+$$
+A=              
+\left[
+\begin{array}{ccc}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a{33}
+\end{array}
+\right]
+=
+B=
+\left[
+\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}\\
+x_{31} & x_{32} & x{33}
+\end{array}
+\right]
+$$
+
+%\begin{flushright}
+\begin{eqnarray}
+\,\,\,\,\,\,\,\,\,\,x+y-z=5\\
+x-y+z=5\\
+x-z=0
+\end{eqnarray}
+%\end{flushright}
+
+%\begin{align}
+%x+y-z=5\\
+%x-y+z=5\\
+%x-z=0
+%\end{align}
+
+\begin{eqnarray*}
+\,\,\left|
+\begin{array}{cc}
+a & b\\
+c & d\\
+\end{array}
+\right|=\,ad-bc
+\end{eqnarray*}
+
+\begin{eqnarray}   %Found error here
+a_{1}x+b_{1}y+c_{1}z=d_{1}\\
+a_{2}x+b_{2}y+c_{2}z=d_{2}\\
+a_{3}x+b_{3}y+c_{3}z=d_{3}
+\end{eqnarray}
+\section{Equations involving limits:}
+$$\underset{\Delta x\rightarrow 0}{\lim}\,\frac{f(x+\delta x)-f(x)}{\Delta x}$$
+$$\underset{x\rightarrow 0}{\lim}\,\frac{\sin x}{x}=1$$
+\section{Typesetting Boolean Expressions}
+$$\underline{x+y}=\overline{x}.\overline{y}$$
+$$\overline{A}BC+A\overline{BC}+\overline{ABC}$$
+\section{Typesetting equations involving summa-tion}
+$$\sum_{k=0}^{\infty}\frac{(-1)^{k}}{k+1}=\int_{0}^{1}\frac{dx}{1+x}$$
+\end{document}
+

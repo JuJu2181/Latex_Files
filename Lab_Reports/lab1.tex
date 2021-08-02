@@ -1,0 +1,336 @@
+
+\documentclass[12pt]{report}
+
+\usepackage[a4paper, top=2cm, bottom=2cm]{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{paralist}
+\usepackage{array}
+\usepackage[cache=false]{minted}
+\usepackage{nopageno}
+
+\newcommand{\sub}[1]{\textsubscript{#1}}
+\newenvironment{hang}
+{\list{}{
+    %  \itemindent=-.5cm
+    \leftmargin=.5cm
+    % \rightmargin=.5cm
+    \topsep=0pt
+    \partopsep=0pt
+    }\item\relax}
+    {\endlist}
+    
+\begin{document}
+\begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \sffamily
+    \large
+    \parskip=10pt
+    \MakeUppercase{TRIBHUWAN UNIVERSITY}
+
+    \MakeUppercase{\bfseries\LARGE KHWOPA COLLEGE OF ENGINEERING}
+
+    Department of Computer Engineering
+
+    Libali-8, Bhaktapur
+    \parskip=60pt
+
+    \includegraphics[width=150pt]{images/logo.png}
+
+    \bfseries
+    A
+    \parskip=10pt
+
+    Lab Report on Computer Organization and Architecture
+
+    Lab sheet No: 1
+    \parskip=60pt
+
+    \normalfont
+    \begin{tabular}{@{}lp{2cm}l@{}}
+        \textbf{Submitted By:}                     &  & \textbf{Submitted to:} \\
+        \textbf{Name:} Bibek Manandhar             &  & Mensun Lakhemaru       \\
+        \textbf{CRN:} \MakeUppercase{kce075bct013} &  & Computer Department
+    \end{tabular}
+
+    \bfseries
+    Date of submission: 2021/07/16
+\end{center}
+
+% \subsection*{\MakeUppercase{objectives}:}
+% \begin{compactitem}
+%     \item To study about basics of VHDL programming language.
+%     \item To implement basic NAND gate and D flip-flop using VHDL.
+%     \item To implement arithmetic circuits like half adder and full adder using VHDL.
+%     \item To test the implemented logic circuits using test bench in VHDL.
+% \end{compactitem}
+% \subsection*{\MakeUppercase{theory}:}
+% \subsubsection*{VHDL:}
+% VHDL stands for Very High-Speed Integrated Circuit hardware description language.
+% It is a programming language used to model a digital system by dataflow, behavioral
+% and structural style of modeling. This language was first introduced in 1981 for the
+% department of Defense (DoD) under the VHSIC program.
+
+% VHDL is a strongly typed language and is not case sensitive. A program in
+% VHDL is known as a VHDL model. A VHDL code is composed of three sections:
+% \begin{compactitem}
+%     \item Library/package declarations
+%     \item Entity
+%     \item Architecture
+% \end{compactitem}
+% \includegraphics[width=\linewidth]{images/VHDLcodeStructure.png}
+% \begin{hang}
+%     \textbf{Library/Package declarations:}\\
+%     This section contains a list of all libraries and respective packages needed in the design.
+%     The most commonly used libraries are ieee, std, and work (the last two are made visible
+%     by default).
+
+%     \textbf{Entity:}\\
+%     Entity specifies mainly the circuit's I/O ports, plus (optional) generic constants.
+%     It defines the names, input output signals and modes of a hardware module and provides a
+%     method to abstract the functionality of a circuit description to a higher level.
+
+%     \textbf{Architecture:}\\
+%     Architecture contains the VHDL code proper, wich describes how the circuit should function,
+%     from which a compliant hardware is inferred. The architecture describes what the circuit
+%     actually does. It describes the internal implementation of the associated entity. There
+%     can be any number of architectures describing a single entity.
+% \end{hang}
+% \subsubsection*{NAND Gate:}
+% A NAND gate(``not AND gate'') is a logic gate that produces a low output(0) only if all its
+% inputs are true, and high output(1) otherwise. Hence the NAND gate is the inverse of AND gate,
+% and its circuit is produced by connecting an AND gate to a NOT gate. It can have two or more
+% inputs and produces only one output. The logic circuit and truth table of NAND gate are
+% shown below.
+% \begin{center}
+%     \includegraphics[width=0.5\linewidth]{images/nandLogicCircuit.png}
+%     \begin{tabular}[b]{|>{\centering}m{1cm}|>{\centering}m{1cm}|>{\centering\arraybackslash}m{1cm}|}
+%         \hline
+%         \textbf{A} & \textbf{B} & \textbf{Z} \\
+%         \hline
+%         0          & 0          & 1          \\
+%         0          & 1          & 1          \\
+%         1          & 0          & 1          \\
+%         1          & 1          & 0          \\
+%         \hline
+%     \end{tabular}
+% \end{center}
+% \subsubsection*{D FLIP-FLOP:}
+% D Flip-Flop is the most important of all the clocked flip-flops as it ensures that both
+% the inputs S and R are never the same at the same time. It is constructed by joining S and R
+% inputs with and inverter between them, as shown below. Thus the D flip-flop has a single input(D).
+% \begin{compactitem}
+%     \item In D flip-flop, if the input D = 1, the inputs of SR flip flop are S = 1, R = 0,
+%     the next state output is logic 1, which will set the flip flop.
+%     \item When D = 0, the inputs of SR flip flop will become S = 0, R = 1, then next state
+%     output is logic 0, which will reset the flip flop.
+% \end{compactitem}
+% The circuit diagram and truth table for D Flip-Flop are as follows:
+% \begin{center}
+%     \includegraphics[width=0.7\linewidth]{images/D_FF_circuitDiagram.png}\\
+%     \begin{tabular}{|>{\centering}m{2cm}|>{\centering}m{2cm}|>{\centering}m{2cm}|>{\centering}m{2cm}|>{\centering\arraybackslash}m{4cm}|}
+%         \hline
+%         \textbf{CP} & \textbf{D} & \textbf{Q} & \textbf{Q\sub{+1}} & \textbf{State} \\
+%         \hline
+%         1           & 0          & 0          & 0                  & RESET          \\
+%         1           & 0          & 1          & 0                  & RESET          \\
+%         1           & 1          & 0          & 1                  & SET            \\
+%         1           & 1          & 1          & 1                  & SET            \\
+%         0           & 0          & 0          & 0                  & NO CHANGE      \\
+%         0           & 0          & 1          & 1                  & NO CHANGE      \\
+%         0           & 1          & 0          & 0                  & NO CHANGE      \\
+%         0           & 1          & 1          & 1                  & NO CHANGE      \\
+%         \hline
+%     \end{tabular}
+% \end{center}
+% \vskip 5pt
+% \subsubsection*{\MakeUppercase{arithmetic circuits:}}
+% Arithmetic logic circuits are the combinational logic circuits that perform various arithmetic
+% and logical operations.
+% \begin{hang}
+%     \subsubsection*{\MakeUppercase{half adder:}}
+%     Half adder is an arithmetic logical circuit that performs addition of two binary bits.
+%     Its truth table is shown below along with its logical circuit. In this table,
+%     a\sub{0} is added to bit b\sub{0} to produce the sum s\sub{0} and
+%     carry bit c\sub{1}.\\
+%     Here the Boolean expresssions are:
+%     \begin{compactitem}
+%         \item Sum(s\sub{0}) = a\sub{0} XOR b\sub{0}
+%         \item Carry(c\sub{1}) = a\sub{0} AND b\sub{0}
+%     \end{compactitem}
+%     \begin{center}
+%         \includegraphics[width=0.6\linewidth]{images/HA_logic_circuit.png}
+%         \begin{tabular}[b]{|c|c|c|c|}
+%             \hline
+%             \textbf{a\sub{0}} & \textbf{b\sub{0}} & \textbf{s\sub{0}} & \textbf{c\sub{1}} \\
+%             \hline
+%             0                 & 0                 & 0                 & 0                 \\
+%             0                 & 1                 & 1                 & 0                 \\
+%             1                 & 0                 & 1                 & 0                 \\
+%             1                 & 1                 & 0                 & 1                 \\
+%             \hline
+%         \end{tabular}
+%     \end{center}
+%     \subsubsection*{\MakeUppercase{full adder:}}
+%     Full adder is an arithmetic logic circuit that performs binary addition of three binary bits.
+%     Here, two bits a\sub{i}, b\sub{i} are the actual numbers to be added and the third bit c\sub{i}
+%     is the carry input. The sum of these three bits will produce a sum bit s\sub{i}, and a carry-out
+%     bit c\sub{i+1}. In case of n-bit full adder, the carry in c\sub{i} is provided only to the
+%     first fulll adder at LSB, then the carry otu of this full adder is provided to next full
+%     adder as input carry from right to left. The truth table for full adder along with it's
+%     circuit is given below:
+%     \begin{compactitem}
+%         \item Sum(s) = a\sub{i} xor b\sub{i} xor c\sub{i}
+%         \item Carry(c\sub{i+1}) = (a\sub{i}.b\sub{i}) + (a\sub{i}.c\sub{i}) + (b\sub{i}.c\sub{i})
+%     \end{compactitem}
+%     \begin{center}
+%         \begin{tabular}[b]{|>{\centering}m{1cm}|>{\centering}m{1cm}|>{\centering}m{1cm}|>{\centering}m{1cm}|>{\centering\arraybackslash}m{1cm}|}
+%             \hline
+%             \textbf{c\sub{i}} & \textbf{a\sub{i}} & \textbf{b\sub{i}} & \textbf{s\sub{i}} & \textbf{c\sub{i+1}} \\
+%             \hline
+%             0                 & 0                 & 0                 & 0                 & 0                   \\
+%             0                 & 0                 & 1                 & 1                 & 0                   \\
+%             0                 & 1                 & 0                 & 1                 & 0                   \\
+%             0                 & 1                 & 1                 & 0                 & 1                   \\
+%             1                 & 0                 & 0                 & 1                 & 0                   \\
+%             1                 & 0                 & 1                 & 0                 & 1                   \\
+%             1                 & 1                 & 0                 & 0                 & 1                   \\
+%             1                 & 1                 & 1                 & 1                 & 1                   \\
+%             \hline
+%         \end{tabular}\\
+%         \includegraphics[width=0.8\linewidth]{images/FA_logic_circuit.png}
+%     \end{center}
+%     A block diagram for 4 bit full adder is shown below. Four of these full adders can be
+%     combined to form a 4 bit adder as shown below. Here, the LSB has a carry-in of zero while
+%     the remaining bits get their carry for 4-bit addition.
+%     \begin{center}
+%         \includegraphics[width=\linewidth]{images/4bit_FA_block_diagram.png}
+%     \end{center}
+%     \subsubsection*{\MakeUppercase{half adder/subtractor}}
+%     Half added/subtractor is an arithmetic circuit that can perform both addition as well as
+%     subtraction of 2 binary bits based on a mode bit E. Here, A\sub{0} and B\sub{0} are the
+%     actual bits to be added or subtracted and E is the enable bit. When E = 0, the circuit
+%     behaves as a half adder and gives sum and carry as output. Similarly, when E = 1, the
+%     circuit gives borrow and difference as output. The Boolean expressions are given below:
+%     \begin{compactitem}
+%         \item Sum/Difference = A\sub{0} xor B\sub{0}
+%         \item Carry/Borrow = (A\sub{0} xor E) and B\sub{0}
+%     \end{compactitem}
+%     \pagebreak
+%     Its logical circuit and truth table are shown below:
+%     \begin{center}
+%         \begin{tabular}[b]{|>{\centering}m{1cm}|>{\centering}m{1cm}|>{\centering}m{1cm}|>{\centering}m{1cm}|>{\centering\arraybackslash}m{1cm}|}
+%             \hline
+%             \textbf{E} & \textbf{A\sub{0}} & \textbf{B\sub{0}} & \textbf{SD\sub{0}} & \textbf{CB\sub{1}} \\
+%             \hline
+%             0          & 0                 & 0                 & 0                  & 0                  \\
+%             0          & 0                 & 1                 & 1                  & 0                  \\
+%             0          & 1                 & 0                 & 1                  & 0                  \\
+%             0          & 1                 & 1                 & 0                  & 1                  \\
+%             1          & 0                 & 0                 & 0                  & 0                  \\
+%             1          & 0                 & 1                 & 1                  & 1                  \\
+%             1          & 1                 & 0                 & 1                  & 0                  \\
+%             1          & 1                 & 1                 & 0                  & 0                  \\
+%             \hline
+%         \end{tabular}\\
+%         \includegraphics[width=0.7\linewidth]{images/4bit_FA_logic_circuit.png}
+%     \end{center}
+%     \subsubsection*{\MakeUppercase{full adder/subtractor}}
+%     Full adder/subtractor is an arithmetic circuit that can perform binary addition as well as
+%     subtraction of 3 binary bits based on a mode bit E. Here A\sub{0} and B\sub{0} are the two
+%     actual bits to be added and C\sub{in} is the carry input to the adder/subtractor. Also
+%     sum/difference and carry/borrow are the two outputs of the circuit. When E = 0, circuit
+%     acts as an adder and when E = 1, circuit acts as a subtractor circuit. Its Boolean expressions
+%     are given below:
+%     \begin{compactitem}
+%         \item Sum/Difference = A\sub{0} xor B\sub{0} xor C\sub{in}
+%         \item Carry/Borrow = B\sub{0}.C\sub{in} + (A\sub{0} xor E)(B\sub{0} + C\sub{in})
+%     \end{compactitem}
+%     The circuit for 4 bit adder/subtractor is shown below. Here the enable bit is set to the
+%     first full adder as C\sub{0}. Also the carry output of one full adder is then sent to
+%     another full adder from right to left and C\sub{4} is the carry output of 4\textsuperscript{th}
+%     full adder. A\sub{i} and B\sub{i} are the input bits to each full adder. Also here the B\sub{i}
+%     is passed along with an enable bit to a xor gate as second input to a full adder. When the
+%     enable bit is 0 then the xor gate is diabled so B\sub{0} is passed as input so sum and carry are
+%     obtained as result. Similarly, when enable bit is 1 then the xor gate will complement the input
+%     B\sub{0} so difference and borrow is obtained as the result from the full adders. The circuit
+%     for 4 bit full adder/subtractor is shown below:
+%     \begin{center}
+%         \includegraphics[width=\linewidth]{images/4bit_full_adderSubtractor_circuit.png}
+%     \end{center}
+% \end{hang}
+% \pagebreak
+% \subsubsection*{\MakeUppercase{coding and output:}}
+% \begin{enumerate}
+%     \item \textbf{\MakeUppercase{nand gate:}}\\
+%           \textbf{\MakeUppercase{code}}
+%           \inputminted{vhdl}{../Codes/nandgate/nandgate.vhd}
+%           \textbf{\MakeUppercase{testbench code:}}
+%           \inputminted{vhdl}{../Codes/nandgate/tb_nandgate.vhd}
+%           \textbf{\MakeUppercase{output wave:}}
+%           \begin{center}
+%               \includegraphics[width=0.9\linewidth]{images/nand_wave.png}
+%           \end{center}
+%     \item \textbf{\MakeUppercase{half adder:}}\\
+%           \textbf{\MakeUppercase{code:}}
+%           \inputminted{vhdl}{../Codes/half_adder/half_adder.vhd}
+%           \textbf{\MakeUppercase{testbench code:}}
+%           \inputminted{vhdl}{../Codes/half_adder/tb_half_adder.vhd}
+%           \textbf{\MakeUppercase{output wave:}}
+%           \begin{center}
+%               \includegraphics[width=\linewidth]{images/half_adder_wave.png}
+%           \end{center}
+%           \pagebreak
+%     \item \textbf{\MakeUppercase{full adder:}}\\
+%           \textbf{\MakeUppercase{code:}}
+%           \inputminted{vhdl}{../Codes/full_adder/full_adder.vhd}
+%           \textbf{\MakeUppercase{testbench code:}}
+%           \inputminted{vhdl}{../Codes/full_adder/tb_full_adder.vhd}
+%           \textbf{\MakeUppercase{output wave:}}
+%           \begin{center}
+%               \includegraphics[width=\linewidth]{images/full_adder_wave.png}
+%           \end{center}
+%     \item \textbf{\MakeUppercase{four bit adder:}}\\
+%           \textbf{\MakeUppercase{code:}}
+%           \inputminted{vhdl}{../Codes/four_bit_adder/four_bit_adder.vhd}
+%           \textbf{\MakeUppercase{testbench code:}}
+%           \inputminted{vhdl}{../Codes/four_bit_adder/tb_four_bit_adder.vhd}
+%           \textbf{\MakeUppercase{output wave:}}
+%           \begin{center}
+%               \includegraphics[width=\linewidth]{images/four_bit_adder_wave.png}
+%           \end{center}
+%     \item \textbf{\MakeUppercase{half adder/subtractor:}}\\
+%           \textbf{\MakeUppercase{code:}}
+%           \inputminted{vhdl}{../Codes/half_adder_subtractor/half_adder_subtractor.vhd}
+%           \textbf{\MakeUppercase{testbench code:}}
+%           \inputminted{vhdl}{../Codes/half_adder_subtractor/tb_half_adder_subtractor.vhd}
+%           \pagebreak
+%           \textbf{\MakeUppercase{output wave:}}
+%           \begin{center}
+%               \includegraphics[width=\linewidth]{images/half_adder_subtractor_wave.png}
+%           \end{center}
+%     \item \textbf{\MakeUppercase{4 bit full adder/subtractor:}}\\
+%           \textbf{\MakeUppercase{code:}}
+%           \inputminted{vhdl}{../Codes/addsub4/addsub4.vhd}
+%           \textbf{\MakeUppercase{testbench code:}}
+%           \inputminted{vhdl}{../Codes/addsub4/tb_addsub4.vhd}
+%           \textbf{\MakeUppercase{output wave:}}
+%           \begin{center}
+%               \includegraphics[width=\linewidth]{images/addsub4_wave.png}
+%           \end{center}
+%     \item \textbf{\MakeUppercase{d flip flop:}}\\
+%           \textbf{\MakeUppercase{code:}}
+%           \inputminted{vhdl}{../Codes/d_flip_flop/d_flip_flop.vhd}
+%           \textbf{\MakeUppercase{testbench code:}}
+%           \inputminted{vhdl}{../Codes/d_flip_flop/tb_d_flip_flop.vhd}
+%           \pagebreak
+%           \textbf{\MakeUppercase{output wave:}}
+%           \begin{center}
+%               \includegraphics[width=\linewidth]{images/d_flip_flop_wave.png}
+%           \end{center}
+% \end{enumerate}
+% \textbf{\MakeUppercase{conclusion:}}\\
+% Hence different logical circuits were implemented and simulated using VHDL and
+% their respective test benches in this lab.
+\end{document}
